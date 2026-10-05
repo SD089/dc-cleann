@@ -83,4 +83,13 @@
     var rs;window.addEventListener('resize',function(){if(touched||done)return;clearTimeout(rs);rs=setTimeout(paint,150)});
     paint();if(d.fonts&&d.fonts.load)d.fonts.load('400 60px Marker').then(function(){if(!touched&&!done)paint()}).catch(function(){});
   });
+
+  // Schaumblasen, die beim Berühren platzen
+  if(!reduce)d.querySelectorAll('.foam').forEach(function(f){
+    var R=function(a,b){return a+Math.random()*(b-a)};
+    function set(el,first){var s=R(26,120);el.style.width=el.style.height=s+'px';el.style.left=R(0,96)+'%';var dur=R(9,20);el.style.animationDuration=dur+'s';el.style.animationDelay=(first?-R(0,dur):0)+'s'}
+    for(var i=0;i<16;i++){(function(){var el=d.createElement('span');el.className='bub';set(el,true);f.appendChild(el);
+      el.addEventListener('pointerenter',function(){if(el.classList.contains('pop'))return;el.classList.add('pop');
+        setTimeout(function(){el.style.animation='none';el.classList.remove('pop');void el.offsetWidth;el.style.animation='';set(el,false)},260)});})();}
+  });
 })();
