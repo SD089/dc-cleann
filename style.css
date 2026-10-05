@@ -273,3 +273,28 @@ footer p a{font:inherit;text-transform:none;text-decoration:underline}
 .hero h1 .line2 .mk{position:absolute;left:100%;bottom:.5em;margin-left:.1em;transform:rotate(-8deg);white-space:nowrap}
 .hero .tags{bottom:190px}
 @media (max-width:900px){.hero h1 .line2 .mk{position:static;display:block;margin:.35em 0 0;transform:rotate(-4deg)}.hero .tags{bottom:auto}}
+
+/* Dreckige Stelle mit Rabattcode */
+.scratchbox{position:absolute;right:0;bottom:120px;width:340px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.scratchbox .note{font-size:30px;transform:rotate(-5deg);text-shadow:0 2px 0 #000}
+.scratch{position:relative;width:100%;height:230px;border-radius:14px;overflow:hidden;background:var(--paper);color:#000;box-shadow:0 0 0 4px var(--paper),0 10px 0 4px #000,0 30px 50px -8px rgba(0,0,0,.9);transform:rotate(3deg);transition:transform .3s}
+.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;transition:opacity .6s;cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56'><g transform='rotate(-20 28 28)'><rect x='8' y='16' width='40' height='24' rx='7' fill='%23ffd23f' stroke='%23000' stroke-width='3'/><circle cx='18' cy='25' r='2.5'/><circle cx='30' cy='31' r='3'/><circle cx='39' cy='23' r='2'/></g></svg>") 28 28,grab}
+.prize{position:absolute;inset:0;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr auto;gap:0 14px;padding:16px 18px 12px;align-items:center}
+.prize small{grid-column:1/-1;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.prize b{font-stretch:62%;font-weight:900;font-size:112px;line-height:.82;color:var(--red);grid-row:2}
+.prize span{grid-row:2;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;line-height:1.1;display:flex;flex-direction:column;gap:4px}
+.prize strong{font-stretch:62%;font-weight:900;font-size:46px;letter-spacing:.04em;line-height:.9;border:3px dashed #000;border-radius:8px;padding:6px 10px 2px;align-self:flex-start;user-select:all}
+.prize .stk{grid-column:1/-1;grid-row:3;justify-self:start;font-size:20px;padding:9px 16px 7px;transform:none;box-shadow:0 4px 0 #000}
+.prize em{position:absolute;right:16px;bottom:14px;width:44%;font-style:normal;font-size:11px;line-height:1.25;color:#3b3934;text-align:right}
+.scratch.pop{animation:pop .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{0%{transform:rotate(3deg) scale(1)}40%{transform:rotate(-3deg) scale(1.1)}100%{transform:rotate(3deg) scale(1)}}
+@media (max-width:1100px){.scratchbox{position:static;margin-top:44px;width:min(100%,340px)}.hero{padding-bottom:60px}}
+@media (prefers-reduced-motion:reduce){.scratch.pop{animation:none}}
+.hero h1 .line2 .mk{position:static;display:block;margin:.3em 0 0;transform:rotate(-4deg)}
+.scratch{height:250px}
+.prize{display:flex;flex-direction:column;gap:6px;align-items:stretch;justify-content:space-between;padding:16px 18px 16px}
+.prize .top{display:flex;align-items:center;gap:16px}
+.prize b{white-space:nowrap;font-size:104px}
+.prize .bot{display:flex;align-items:center;gap:12px}
+.prize em{position:static;width:auto;text-align:left;flex:1}
+.prize .stk{flex:none}

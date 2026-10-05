@@ -17,7 +17,7 @@
 <meta name="theme-color" content="#0b0b0c">
 <link rel="preload" href="fonts/archivo.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="fonts/marker.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=6">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"DC Clean","description":"Fahrzeugaufbereitung in München","url":"https://dc-clean.de/","email":"info@dc-clean.de","image":"https://dc-clean.de/img/hero.jpg","priceRange":"15–250 €",
 "address":{"@type":"PostalAddress","addressLocality":"München","addressCountry":"DE"}}
@@ -31,13 +31,18 @@
 </header>
 <main>
 
-<div class="hero" data-dirt>
+<div class="hero">
   <div class="bgphoto"></div>
   <div class="wrap">
     <h1><span>Dein Auto.</span><span class="line2"><span class="red">Wie neu.</span><span class="mk">München</span></span></h1>
     <p class="lead">Innenraum, Lack und Sitze, von Hand aufbereitet. Zu Festpreisen, die du vorher kennst.</p>
     <div class="cta"><a class="plate " href="kontakt.html" aria-label="Termin anfragen"><i class="eu"><u></u>D</i><b>M</b><i class="seal"></i><b>TERMIN</b></a><a class="plate dark" href="leistungen.html" aria-label="Preise ansehen"><i class="eu"><u></u>D</i><b>M</b><i class="seal"></i><b>PREISE</b></a></div>
-    <div class="tags"><div class="tag">Wäsche ab<b>15 €</b></div><div class="tag">Komplett<b>250 €</b></div></div>
+    <div class="scratchbox">
+      <div class="note">hier ist was dreckig &darr;</div>
+      <div class="scratch" data-code="NEU15">
+        <div class="prize"><small>Neukunden-Rabatt</small><div class="top"><b>15 %</b><span>Dein Code <strong>NEU15</strong></span></div><div class="bot"><a class="stk hot" href="kontakt.html?code=NEU15">Einlösen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><em>Nur für deinen ersten Termin, einmal einlösbar.</em></div></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -94,6 +99,6 @@
 </div><p>DC Clean · Fahrzeugaufbereitung in München · <a href="mailto:info@dc-clean.de">info@dc-clean.de</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p></div></footer>
 <a class="spin" href="kontakt.html" aria-label="Termin anfragen"><svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#c">Termin anfragen ✕ Termin anfragen ✕ </textPath></text></svg><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M9 6h9v9"/></svg></a>
 <nav class="dock" aria-label="Schnellzugriff"><a href="index.html" class="" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Start</a><a href="leistungen.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Preise</a><a href="galerie.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M12 3v18"/></svg>Vorher</a><a href="kontakt.html" class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Termin</a></nav>
-<script src="main.js"></script>
+<script src="main.js?v=6"></script>
 </body>
 </html>
